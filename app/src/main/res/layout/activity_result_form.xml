@@ -52,20 +52,19 @@
         android:layout_height="20dp"
         android:text="tgl lahir"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
-        app:layout_constraintBottom__toBottomOf="@+id/nim"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/nim"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tglValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="16dp"
         android:text="ini nanti data tgl lahir"
         app:layout_constraintStart_toEndOf="@+id/tgl"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/nimValue" />
 
     <TextView
         android:id="@+id/jk"
@@ -73,20 +72,19 @@
         android:layout_height="20dp"
         android:text="jenis kelamin"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="128dp"
-        app:layout_constraintBottom__toBottomOf="@+id/tgl"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tgl"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/jkValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="16dp"
         android:text="ini nanti data Jeniskelalmin"
         app:layout_constraintStart_toEndOf="@+id/jk"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tglValue" />
 
     <TextView
         android:id="@+id/jurusan"
@@ -94,18 +92,17 @@
         android:layout_height="20dp"
         android:text="jurusan"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="160dp"
-        app:layout_constraintBottom__toBottomOf="@+id/jk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/jk"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/jurusanValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="160dp"
-        android:text="ini nanti data nim"
+        android:layout_marginTop="16dp"
+        android:text="ini nanti data jurusan"
         app:layout_constraintStart_toEndOf="@+id/jurusan"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/jkValue" />
 </androidx.constraintlayout.widget.ConstraintLayout>
