@@ -61,5 +61,8 @@ class ResultFormActivity : AppCompatActivity() {
     private fun setTextView() {
         textNama.text = nama
         textNim.text = nim
+        textDob.text = dob
+        textKelamin.text = kelamin
+        textJurusan.text= jurusan
     }
 }
