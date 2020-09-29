@@ -17,19 +17,21 @@
 
             <EditText
                 android:id="@+id/editTextNama"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:hint="Nama Mahasiswa"
                 android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/editTextNIM"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -37,43 +39,50 @@
                 android:ems="10"
                 android:hint="Nomor Induk Mahasiswa"
                 android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextNama" />
 
             <EditText
                 android:id="@+id/editTextDate"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:hint="Tanggal Lahir"
                 android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextNIM" />
 
             <RadioGroup
                 android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextDate">
 
                 <RadioButton
                     android:id="@+id/radioButtonLaki"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:checked="true"
                     android:text="Laki Laki" />
 
                 <RadioButton
                     android:id="@+id/radioButtonPerempuan"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:layout_weight="1"
                     android:text="Perempuan" />
             </RadioGroup>
 
@@ -83,29 +92,34 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
             <Button
                 android:id="@+id/buttonIntent"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="SIMPAN (INTENT)"
+                android:layout_marginEnd="16dp"
+                android:text="SIMPAN DATA (INTENT)"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/spinner" />
 
             <Button
                 android:id="@+id/buttonParcel"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="SIMPAN (PARCELABLE)"
+                android:layout_marginEnd="16dp"
+                android:text="SIMPAN DATA (PARCELABLE)"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/buttonIntent"
-                app:layout_constraintTop_toBottomOf="@id/spinner" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonIntent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
