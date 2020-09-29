@@ -28,33 +28,85 @@
 
     <TextView
         android:id="@+id/nim"
-        android:layout_width="86dp"
-        android:layout_height="19dp"
+        android:layout_width="87dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:text="nim"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="74dp" />
+        app:layout_constraintBottom__toBottomOf="@+id/nama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nimValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="ini nanti data nim"
+        app:layout_constraintStart_toEndOf="@+id/nim"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tgl"
         android:layout_width="87dp"
-        android:layout_height="21dp"
+        android:layout_height="20dp"
         android:text="tgl lahir"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="104dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBottom__toBottomOf="@+id/nim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tglValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:text="ini nanti data tgl lahir"
+        app:layout_constraintStart_toEndOf="@+id/tgl"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/jk"
-        android:layout_width="85dp"
-        android:layout_height="21dp"
+        android:layout_width="87dp"
+        android:layout_height="20dp"
         android:text="jenis kelamin"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="140dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintBottom__toBottomOf="@+id/tgl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/jkValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="128dp"
+        android:text="ini nanti data Jeniskelalmin"
+        app:layout_constraintStart_toEndOf="@+id/jk"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/jurusan"
-        android:layout_width="83dp"
+        android:layout_width="87dp"
         android:layout_height="20dp"
         android:text="jurusan"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="176dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintBottom__toBottomOf="@+id/jk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/jurusanValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="160dp"
+        android:text="ini nanti data nim"
+        app:layout_constraintStart_toEndOf="@+id/jurusan"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
