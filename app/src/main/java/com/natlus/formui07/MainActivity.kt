@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
         btnIntent.setOnClickListener {
             val nama = editTextNama.text.toString()
-            val nim = editTextNim.text.toString().toInt()
+            val nim = editTextNim.text.toString()
             val dob = editTextDate.text.toString()
             val kelamin = radioButtonSelection()
             val jurusan = spinenrJurusan.selectedItem.toString()

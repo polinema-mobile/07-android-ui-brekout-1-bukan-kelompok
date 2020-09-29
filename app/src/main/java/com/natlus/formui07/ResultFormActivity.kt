@@ -30,6 +30,7 @@ class ResultFormActivity : AppCompatActivity() {
 
         setUp()
         getData()
+        setTextView()
     }
 
     private fun setUp() {
