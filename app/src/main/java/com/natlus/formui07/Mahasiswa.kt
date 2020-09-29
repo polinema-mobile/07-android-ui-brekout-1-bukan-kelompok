@@ -8,6 +8,6 @@ data class Mahasiswa(
     var nama: String,
     var nim: Int,
     var date: String,
-    var gender: Char,
+    var gender: String,
     var jurusan: String
 ) : Parcelable
