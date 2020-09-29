@@ -56,22 +56,24 @@
                 android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/editTextDate"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextDate">
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButtonLaki"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="Laki Laki" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radioButtonPerempuan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:text="Perempuan" />
             </RadioGroup>
 
@@ -79,20 +81,31 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/buttonIntent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button"
-                app:layout_constraintTop_toBottomOf="@id/spinner"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"/>
+                android:text="SIMPAN (INTENT)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+            <Button
+                android:id="@+id/buttonParcel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="SIMPAN (PARCELABLE)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonIntent"
+                app:layout_constraintTop_toBottomOf="@id/spinner" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
