@@ -1,10 +1,8 @@
 package com.natlus.formui07
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class ResultFormActivity : AppCompatActivity() {
     private val DATA_JENIS = "DATA_JENIS"
@@ -44,7 +42,7 @@ class ResultFormActivity : AppCompatActivity() {
     private fun getData() {
         val type = intent.getStringExtra(DATA_JENIS)
         if (type.equals("Parcelable")) {
-            val dataMhs = intent.extras?.getParcelable<Mahasiswa>(DATA_MHS)
+            val dataMhs = intent.getParcelableExtra<Mahasiswa>(DATA_MHS)
             nama = dataMhs!!.nama
             nim = dataMhs.nim.toString()
             dob = dataMhs.date
@@ -52,7 +50,7 @@ class ResultFormActivity : AppCompatActivity() {
             jurusan = dataMhs.jurusan
         } else {
             nama = intent.getStringExtra(DATA_NAMA).toString()
-            nim = intent.getStringExtra(DATA_NIM).toString()
+            nim = intent.getIntExtra(DATA_NIM, 0).toString()
             dob = intent.getStringExtra(DATA_DATE).toString()
             kelamin = intent.getStringExtra(DATA_KELAMIN).toString()
             jurusan = intent.getStringExtra(DATA_JURUSAN).toString()
@@ -64,6 +62,6 @@ class ResultFormActivity : AppCompatActivity() {
         textNim.text = nim
         textDob.text = dob
         textKelamin.text = kelamin
-        textJurusan.text= jurusan
+        textJurusan.text = jurusan
     }
 }

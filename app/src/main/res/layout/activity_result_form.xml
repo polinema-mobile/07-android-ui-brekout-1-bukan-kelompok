@@ -112,5 +112,5 @@
         android:layout_marginTop="16dp"
         android:text="ini nanti data jurusan"
         app:layout_constraintStart_toEndOf="@+id/jurusan"
-        app:layout_constraintTop_toBottomOf="@id/jkValue" />
+        app:layout_constraintBottom_toBottomOf="@+id/jurusan" />
 </androidx.constraintlayout.widget.ConstraintLayout>
