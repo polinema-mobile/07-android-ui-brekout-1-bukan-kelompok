@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dob: String
     private lateinit var kelamin: String
     private lateinit var jurusan: String
-    private lateinit var btnIntent: Button
     private lateinit var btnParcelable: Button
     private lateinit var spinenrJurusan: Spinner
     private lateinit var radioGroupKelamin: RadioGroup
@@ -42,18 +40,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setUp()
-        dataSpinner()
+//        dataSpinner()
         datePicker()
         buttonListener()
     }
 
     private fun setUp() {
-        btnIntent = findViewById(R.id.buttonIntent)
         btnParcelable = findViewById(R.id.buttonParcel)
-        spinenrJurusan = findViewById(R.id.spinner)
-        radioGroupKelamin = findViewById(R.id.radioGroup)
+        radioGroupKelamin = findViewById(R.id.radioGroupSex)
         editTextDate = findViewById(R.id.editTextDate)
-        editTextNim = findViewById(R.id.editTextNIM)
+        editTextNim = findViewById(R.id.editTextNik)
         editTextNama = findViewById(R.id.editTextNama)
     }
 
@@ -67,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
             val dpd = DatePickerDialog(
                 this,
-                { view, year, monthOfYear, dayOfMonth ->
+                { _, year, monthOfYear, dayOfMonth ->
                     val bulan = monthOfYear + 1
                     editTextDate.setText("$dayOfMonth/$bulan/$year")
                 },
@@ -80,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun radioButtonSelection(): String {
-        val selected: Int = radioGroup!!.checkedRadioButtonId
+        val selected: Int = radioGroupKelamin.checkedRadioButtonId
         radioButtonChecked = findViewById(selected)
         return radioButtonChecked.text.toString()
     }
@@ -99,19 +95,6 @@ class MainActivity : AppCompatActivity() {
             val resultIntent = Intent(this, ResultFormActivity::class.java)
             resultIntent.putExtra(DATA_JENIS, "Parcelable")
             resultIntent.putExtra(DATA_MHS, dataMhs)
-            startActivity(resultIntent)
-        }
-
-        btnIntent.setOnClickListener {
-            getDataMhs()
-
-            val resultIntent = Intent(this, ResultFormActivity::class.java)
-            resultIntent.putExtra(DATA_JENIS, "Intent")
-            resultIntent.putExtra(DATA_NAMA, nama)
-            resultIntent.putExtra(DATA_NIM, nim)
-            resultIntent.putExtra(DATA_DATE, dob)
-            resultIntent.putExtra(DATA_KELAMIN, kelamin)
-            resultIntent.putExtra(DATA_JURUSAN, jurusan)
             startActivity(resultIntent)
         }
     }
