@@ -2,10 +2,9 @@ package com.natlus.formui07
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -17,6 +16,11 @@ class MainActivity : AppCompatActivity() {
     private val DATA_DATE = "DATA_DATE"
     private val DATA_KELAMIN = "DATA_KELAMIN"
     private val DATA_JURUSAN = "DATA_JURUSAN"
+    private lateinit var nama: String
+    private var nim: Int = 0
+    private lateinit var dob: String
+    private lateinit var kelamin: String
+    private lateinit var jurusan: String
     private lateinit var btnIntent: Button
     private lateinit var btnParcelable: Button
     private lateinit var spinenrJurusan: Spinner
@@ -25,7 +29,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextDate: EditText
     private lateinit var editTextNama: EditText
     private lateinit var editTextNim: EditText
-    private var jurusan = arrayOf("Akutansi", "Teknik Informatika", "Teknik Mesin")
+    private var jurusanList = arrayOf(
+        "Akutansi",
+        "Teknik Informatika",
+        "Teknik Mesin",
+        "Teknik Sipil",
+        "Manajemen Informatika"
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -75,18 +86,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun dataSpinner() {
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, jurusan)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, jurusanList)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinenrJurusan.adapter = adapter
     }
 
     private fun buttonListener() {
         btnParcelable.setOnClickListener {
-            val nama = editTextNama.text.toString()
-            val nim = editTextNim.text.toString().toInt()
-            val dob = editTextDate.text.toString()
-            val kelamin = radioButtonSelection()
-            val jurusan = spinenrJurusan.selectedItem.toString()
+            getDataMhs()
 
             val dataMhs = Mahasiswa(nama, nim, dob, kelamin, jurusan)
             val resultIntent = Intent(this, ResultFormActivity::class.java)
@@ -96,11 +103,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnIntent.setOnClickListener {
-            val nama = editTextNama.text.toString()
-            val nim = editTextNim.text.toString()
-            val dob = editTextDate.text.toString()
-            val kelamin = radioButtonSelection()
-            val jurusan = spinenrJurusan.selectedItem.toString()
+            getDataMhs()
 
             val resultIntent = Intent(this, ResultFormActivity::class.java)
             resultIntent.putExtra(DATA_JENIS, "Intent")
@@ -111,5 +114,13 @@ class MainActivity : AppCompatActivity() {
             resultIntent.putExtra(DATA_JURUSAN, jurusan)
             startActivity(resultIntent)
         }
+    }
+
+    private fun getDataMhs() {
+        nama = editTextNama.text.toString()
+        nim = editTextNim.text.toString().toInt()
+        dob = editTextDate.text.toString()
+        kelamin = radioButtonSelection()
+        jurusan = spinenrJurusan.selectedItem.toString()
     }
 }
