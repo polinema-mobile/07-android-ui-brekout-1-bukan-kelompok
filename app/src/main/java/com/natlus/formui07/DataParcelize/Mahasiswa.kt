@@ -1,4 +1,4 @@
-package com.natlus.formui07
+package com.natlus.formui07.DataParcelize
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
