@@ -1,12 +1,14 @@
 package com.natlus.formui07
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.natlus.formui07.DataParcelize.PribadiParcelize
+import com.natlus.formui07.DataParcelize.SchoolParcelize
 
 class ResultFormActivity : AppCompatActivity() {
-    private val DATA_COMPLETE = "DATA_COMPLETE"
+    private val DATA_SCHOOL = "DATA_SCHOOL"
+
     private lateinit var textNama: TextView
     private lateinit var textNim: TextView
     private lateinit var textDob: TextView
@@ -22,6 +24,7 @@ class ResultFormActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result_form)
 
         setUp()
+        getData()
     }
 
     private fun setUp() {
@@ -33,7 +36,8 @@ class ResultFormActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        val dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_COMPLETE)
+        val dataSchool = intent.getParcelableExtra<SchoolParcelize>(DATA_SCHOOL)
+        Log.e(DATA_SCHOOL, dataSchool.toString())
     }
 
     private fun setTextView() {
