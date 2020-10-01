@@ -3,15 +3,10 @@ package com.natlus.formui07
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.natlus.formui07.DataParcelize.PribadiParcelize
 
 class ResultFormActivity : AppCompatActivity() {
-    private val DATA_JENIS = "DATA_JENIS"
-    private val DATA_MHS = "DATA_MHS"
-    private val DATA_NAMA = "DATA_NAMA"
-    private val DATA_NIM = "DATA_NIM"
-    private val DATA_DATE = "DATA_DATE"
-    private val DATA_KELAMIN = "DATA_KELAMIN"
-    private val DATA_JURUSAN = "DATA_JURUSAN"
+    private val DATA_COMPLETE = "DATA_COMPLETE"
     private lateinit var textNama: TextView
     private lateinit var textNim: TextView
     private lateinit var textDob: TextView
@@ -27,8 +22,6 @@ class ResultFormActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result_form)
 
         setUp()
-        getData()
-        setTextView()
     }
 
     private fun setUp() {
@@ -40,21 +33,7 @@ class ResultFormActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        val type = intent.getStringExtra(DATA_JENIS)
-        if (type.equals("Parcelable")) {
-            val dataMhs = intent.getParcelableExtra<Mahasiswa>(DATA_MHS)
-            nama = dataMhs!!.nama
-            nim = dataMhs.nim.toString()
-            dob = dataMhs.date
-            kelamin = dataMhs.gender
-            jurusan = dataMhs.jurusan
-        } else {
-            nama = intent.getStringExtra(DATA_NAMA).toString()
-            nim = intent.getIntExtra(DATA_NIM, 0).toString()
-            dob = intent.getStringExtra(DATA_DATE).toString()
-            kelamin = intent.getStringExtra(DATA_KELAMIN).toString()
-            jurusan = intent.getStringExtra(DATA_JURUSAN).toString()
-        }
+        val dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_COMPLETE)
     }
 
     private fun setTextView() {
