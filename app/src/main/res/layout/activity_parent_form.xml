@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +11,7 @@
         tools:context=".ParentFormActivity">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textTitleParentData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -24,188 +23,186 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/namabpk"
+            android:id="@+id/editTextNamaAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="nama bapac"
+            android:hint="Nama Ayah Kandung"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textTitleParentData" />
 
         <EditText
-            android:id="@+id/nikbpk"
+            android:id="@+id/editTextNikAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="nik bapac"
+            android:hint="Nik Ayah Kandung"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/namabpk" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNamaAyah" />
 
         <EditText
-            android:id="@+id/namaibu"
+            android:id="@+id/editTextNamaIbu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="nama ibuk"
+            android:hint="Nama Ibu Kandung"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nikbpk" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNikAyah" />
 
         <EditText
-            android:id="@+id/nikibu"
+            android:id="@+id/editTextNikIbu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="nik ibuk"
+            android:hint="Nik Ibu Kandung"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/namaibu" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNamaIbu" />
 
         <EditText
-            android:id="@+id/lahirbpk"
+            android:id="@+id/editTextLahirAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="tgl lahir bapac"
+            android:hint="Tahun Lahir Ayah"
             android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nikibu" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNikIbu" />
 
         <EditText
-            android:id="@+id/lahiribu"
+            android:id="@+id/editTextLahirIbu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="tgl lahir ibuk"
+            android:hint="Tahun Lahir Ibu"
             android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lahirbpk" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextLahirAyah" />
 
         <EditText
-            android:id="@+id/almtortu"
+            android:id="@+id/editTextAlamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:hint="alamat ortu"
-            android:inputType="textPostalAddress"
+            android:hint="Alamat yang dihuni saat ini"
+            android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lahiribu" />
+            app:layout_constraintTop_toBottomOf="@id/editTextLahirIbu" />
 
         <EditText
-            android:id="@+id/kodepos"
+            android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:hint="KODE POS"
-            android:inputType="number"
+            android:ems="20"
+            android:hint="No. Hp Ortu"
+            android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/almtortu" />
+            app:layout_constraintTop_toBottomOf="@id/editTextAlamat" />
 
         <EditText
-            android:id="@+id/nohportu"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:hint="HP ORTU"
-            android:inputType="number"
+            android:ems="20"
+            android:hint="Email Ortu"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kodepos" />
+            app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
 
         <EditText
-            android:id="@+id/pdkbpk"
+            android:id="@+id/editTextPendidikanAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="Pendidikan Terakhir Bapac"
+            android:hint="Pend. Akhir Ayah"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nohportu" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
         <EditText
-            android:id="@+id/pdkibu"
+            android:id="@+id/editTextPendidikanIbu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="Pendidikan Terakhir Ibuk"
+            android:hint="Pend. Akhir Ibu"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pdkbpk" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPendidikanAyah" />
 
         <EditText
-            android:id="@+id/pkjbpk"
+            android:id="@+id/editTextPekerjaanAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="Pekerjaan Bapac"
+            android:hint="Pekerjaan Ayah"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pdkibu" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPendidikanIbu" />
 
         <EditText
-            android:id="@+id/pkjibu"
+            android:id="@+id/editTextPekerjaanIbu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="Pekerjaan Ibuk"
+            android:hint="Pekerjaan Ibu"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pkjbpk" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPekerjaanAyah" />
 
         <Button
             android:id="@+id/btnParenttoSchool"
@@ -216,9 +213,8 @@
             android:layout_marginEnd="16dp"
             android:text="NEXT"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pkjibu" />
-
+            app:layout_constraintTop_toBottomOf="@id/editTextPekerjaanIbu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

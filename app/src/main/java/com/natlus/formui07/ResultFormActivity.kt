@@ -38,6 +38,8 @@ class ResultFormActivity : AppCompatActivity() {
     private fun getData() {
         val dataSchool = intent.getParcelableExtra<SchoolParcelize>(DATA_SCHOOL)
         Log.e(DATA_SCHOOL, dataSchool.toString())
+        Log.e(DATA_SCHOOL, dataSchool!!.dataParent.toString())
+        Log.e(DATA_SCHOOL, dataSchool.dataParent.dataPribadi.toString())
     }
 
     private fun setTextView() {

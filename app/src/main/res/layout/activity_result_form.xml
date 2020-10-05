@@ -1,118 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultFormActivity">
 
-    <TextView
-        android:id="@+id/nama"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="nama"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/namaValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:text="ini nanti data nama"
-        app:layout_constraintBottom_toTopOf="@+id/nim"
-        app:layout_constraintStart_toEndOf="@+id/nama"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textTitleSelfForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Data Pribadi"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nim"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="nim"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nama" />
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="nama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitleSelfForm" />
 
-    <TextView
-        android:id="@+id/nimValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="ini nanti data nim"
-        app:layout_constraintBottom_toTopOf="@+id/tgl"
-        app:layout_constraintStart_toEndOf="@+id/nim"
-        app:layout_constraintTop_toBottomOf="@id/namaValue" />
+        <TextView
+            android:id="@+id/namaValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="ini nanti data nama"
+            app:layout_constraintBottom_toTopOf="@+id/nim"
+            app:layout_constraintStart_toEndOf="@+id/nama"
+            app:layout_constraintTop_toBottomOf="@id/textTitleSelfForm" />
 
-    <TextView
-        android:id="@+id/tgl"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="tgl lahir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nim" />
+        <TextView
+            android:id="@+id/nim"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="nim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nama" />
 
-    <TextView
-        android:id="@+id/tglValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="ini nanti data tgl lahir"
-        app:layout_constraintBottom_toTopOf="@+id/jk"
-        app:layout_constraintStart_toEndOf="@+id/tgl"
-        app:layout_constraintTop_toBottomOf="@id/nimValue" />
+        <TextView
+            android:id="@+id/nimValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="ini nanti data nim"
+            app:layout_constraintBottom_toTopOf="@+id/tgl"
+            app:layout_constraintStart_toEndOf="@+id/nim"
+            app:layout_constraintTop_toBottomOf="@id/namaValue" />
 
-    <TextView
-        android:id="@+id/jk"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="jenis kelamin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tgl" />
+        <TextView
+            android:id="@+id/tgl"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="tgl lahir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nim" />
 
-    <TextView
-        android:id="@+id/jkValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="ini nanti data Jeniskelalmin"
-        app:layout_constraintBottom_toTopOf="@+id/jurusan"
-        app:layout_constraintStart_toEndOf="@+id/jk"
-        app:layout_constraintTop_toBottomOf="@id/tglValue" />
+        <TextView
+            android:id="@+id/tglValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="ini nanti data tgl lahir"
+            app:layout_constraintBottom_toTopOf="@+id/pribadEmail"
+            app:layout_constraintStart_toEndOf="@+id/tgl"
+            app:layout_constraintTop_toBottomOf="@id/nimValue" />
 
-    <TextView
-        android:id="@+id/jurusan"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="jurusan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jk" />
+        <TextView
+            android:id="@+id/pribadEmail"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tgl" />
 
-    <TextView
-        android:id="@+id/jurusanValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="ini nanti data jurusan"
-        app:layout_constraintStart_toEndOf="@+id/jurusan"
-        app:layout_constraintTop_toBottomOf="@id/jkValue"
-        app:layout_constraintBottom_toBottomOf="@+id/jurusan"/>
+        <TextView
+            android:id="@+id/pribadEmailValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="ini nanti data email pribadi"
+            app:layout_constraintBottom_toTopOf="@id/textTitleParentForm"
+            app:layout_constraintStart_toEndOf="@+id/pribadEmail"
+            app:layout_constraintTop_toBottomOf="@id/tglValue" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textTitleParentForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Data Orang Tua"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pribadEmail" />
+
+        <TextView
+            android:id="@+id/parentNamaAyah"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="nama Ayah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitleParentForm" />
+
+        <TextView
+            android:id="@+id/parentNamaAyahValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="ini nanti data nama ayah"
+            app:layout_constraintStart_toEndOf="@+id/parentNamaAyah"
+            app:layout_constraintTop_toBottomOf="@id/textTitleParentForm" />
+
+        <TextView
+            android:id="@+id/parentNikAyah"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="nik Ayah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/parentNamaAyah" />
+
+        <TextView
+            android:id="@+id/parentNikAyahValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="ini nanti data nik ayah"
+            app:layout_constraintStart_toEndOf="@+id/parentNamaAyah"
+            app:layout_constraintTop_toBottomOf="@id/parentNamaAyahValue" />
+
+        <TextView
+            android:id="@+id/parentPekerjaanIbu"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Pekerjaan ibu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parentNikAyah" />
+
+        <TextView
+            android:id="@+id/parentPekerjaanIbuValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="ini nanti data pekerjaan ibu"
+            app:layout_constraintStart_toEndOf="@+id/parentPekerjaanIbu"
+            app:layout_constraintTop_toBottomOf="@id/parentNikAyahValue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
