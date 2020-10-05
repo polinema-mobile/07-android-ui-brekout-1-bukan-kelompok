@@ -14,6 +14,5 @@ data class SchoolParcelize(
     var kodePosUnivAsal:String,
     var akreditasiUnivAsal:String,
     var nilaiIPK:String,
-    var dataPribadi: PribadiParcelize,
     var dataParent: ParentParcelize
 ) : Parcelable

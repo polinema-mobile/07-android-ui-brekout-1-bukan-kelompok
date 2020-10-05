@@ -12,7 +12,6 @@ data class ParentParcelize(
     var tanggalLahirAyah: String,
     var tanggalLahirIbu: String,
     var alamatParent: String,
-    var kodePos: String,
     var phoneOrtu: String,
     var pendidikanAyah: String,
     var pendidikanIbu: String,
