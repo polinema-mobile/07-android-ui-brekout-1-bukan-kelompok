@@ -15,27 +15,15 @@ class SchoolFormActivity : AppCompatActivity() {
     private val DATA_PARENT = "DATA_PARENT"
     private val DATA_SCHOOL = "DATA_SCHOOL"
 
-    private lateinit var namaUnivAsal: String
-    private lateinit var namaFakultasAsal: String
-    private lateinit var namaProdiAsal: String
-    private lateinit var provinsiUnivAsal: String
-    private lateinit var kotaUnivAsal: String
-    private lateinit var alamatUnivAsal: String
-    private lateinit var kodePosUnivAsal: String
-    private lateinit var akreditasiUnivAsal: String
-    private lateinit var nilaiIPK: String
-    private lateinit var dataPribadi: PribadiParcelize
-    private lateinit var dataParent: ParentParcelize
-
-    private lateinit var editTextUnivAsal:EditText
-    private lateinit var editTextFakultasAsal:EditText
-    private lateinit var editTextProdiAsal:EditText
-    private lateinit var spinnerProvinsiUnivAsal:Spinner
-    private lateinit var spinnerKotaUnivAsal:Spinner
-    private lateinit var editTextAlamatUnivAsal:EditText
-    private lateinit var editTextKodePos:EditText
-    private lateinit var editTextAkreditasiUnivAsal:EditText
-    private lateinit var editTextNilaiIPK:EditText
+    private lateinit var editTextUnivAsal: EditText
+    private lateinit var editTextFakultasAsal: EditText
+    private lateinit var editTextProdiAsal: EditText
+    private lateinit var spinnerProvinsiUnivAsal: Spinner
+    private lateinit var spinnerKotaUnivAsal: Spinner
+    private lateinit var editTextAlamatUnivAsal: EditText
+    private lateinit var editTextKodePos: EditText
+    private lateinit var editTextAkreditasiUnivAsal: EditText
+    private lateinit var editTextNilaiIPK: EditText
     private lateinit var btnGoToResult: Button
 
     private lateinit var dataProvinsi: Array<String>
@@ -80,32 +68,18 @@ class SchoolFormActivity : AppCompatActivity() {
         spinnerKotaUnivAsal.adapter = adapterKota
     }
 
-    private fun getDataSchool() {
-        namaUnivAsal = editTextUnivAsal.text.toString()
-        namaFakultasAsal = editTextFakultasAsal.text.toString()
-        namaProdiAsal = editTextProdiAsal.text.toString()
-        provinsiUnivAsal = spinnerProvinsiUnivAsal.selectedItem.toString()
-        kotaUnivAsal = spinnerKotaUnivAsal.selectedItem.toString()
-        alamatUnivAsal = editTextAlamatUnivAsal.text.toString()
-        kodePosUnivAsal = editTextKodePos.text.toString()
-        akreditasiUnivAsal = editTextAkreditasiUnivAsal.text.toString()
-        nilaiIPK = editTextNilaiIPK.text.toString()
-        dataParent = intent.getParcelableExtra<ParentParcelize>(DATA_PARENT)!!
-    }
-
     private fun intentToResult() {
-        getDataSchool()
         val dataSchool = SchoolParcelize(
-            namaUnivAsal,
-            namaFakultasAsal,
-            namaProdiAsal,
-            provinsiUnivAsal,
-            kotaUnivAsal,
-            alamatUnivAsal,
-            kodePosUnivAsal,
-            akreditasiUnivAsal,
-            nilaiIPK,
-            dataParent
+            namaUnivAsal = editTextUnivAsal.text.toString(),
+            namaFakultasAsal = editTextFakultasAsal.text.toString(),
+            namaProdiAsal = editTextProdiAsal.text.toString(),
+            provinsiUnivAsal = spinnerProvinsiUnivAsal.selectedItem.toString(),
+            kotaUnivAsal = spinnerKotaUnivAsal.selectedItem.toString(),
+            alamatUnivAsal = editTextAlamatUnivAsal.text.toString(),
+            kodePosUnivAsal = editTextKodePos.text.toString(),
+            akreditasiUnivAsal = editTextAkreditasiUnivAsal.text.toString(),
+            nilaiIPK = editTextNilaiIPK.text.toString(),
+            dataParent = intent.getParcelableExtra<ParentParcelize>(DATA_PARENT)!!
         )
 
         val resultIntent = Intent(this, ResultFormActivity::class.java)

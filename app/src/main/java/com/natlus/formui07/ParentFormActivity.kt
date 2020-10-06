@@ -2,6 +2,7 @@ package com.natlus.formui07
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -11,20 +12,6 @@ import com.natlus.formui07.DataParcelize.PribadiParcelize
 class ParentFormActivity : AppCompatActivity() {
     private val DATA_PRIBADI = "DATA_PRIBADI"
     private val DATA_PARENT = "DATA_PARENT"
-
-    private lateinit var namaAyah: String
-    private var nikAyah: Int = 0
-    private lateinit var namaIbu: String
-    private var nikIbu: Int = 0
-    private lateinit var tanggalLahirAyah: String
-    private lateinit var tanggalLahirIbu: String
-    private lateinit var alamatParent: String
-    private lateinit var phoneOrtu: String
-    private lateinit var pendidikanAyah: String
-    private lateinit var pendidikanIbu: String
-    private lateinit var pekerjaanAyah: String
-    private lateinit var pekerjaanIbu: String
-    private lateinit var dataPribadi: PribadiParcelize
 
     private lateinit var editTextNamaAyah: EditText
     private lateinit var editTextNikAyah: EditText
@@ -67,41 +54,26 @@ class ParentFormActivity : AppCompatActivity() {
         editTextPekerjaanAyah = findViewById(R.id.editTextPekerjaanAyah)
         editTextPekerjaanIbu = findViewById(R.id.editTextPekerjaanIbu)
         btnParenttoSchool = findViewById(R.id.btnParenttoSchool)
-    }
 
-    private fun getDataParent() {
-        namaAyah = editTextNamaAyah.text.toString()
-        nikAyah = editTextNikAyah.text.toString().toInt()
-        namaIbu = editTextNamaIbu.text.toString()
-        nikIbu = editTextNikIbu.text.toString().toInt()
-        tanggalLahirAyah = editTextLahirAyah.text.toString()
-        tanggalLahirIbu = editTextLahirIbu.text.toString()
-        alamatParent = editTextAlamat.text.toString()
-        phoneOrtu = editTextPhone.text.toString()
-        pendidikanAyah = editTextPendidikanAyah.text.toString()
-        pendidikanIbu = editTextPendidikanIbu.text.toString()
-        pekerjaanAyah = editTextPekerjaanAyah.text.toString()
-        pekerjaanIbu = editTextPekerjaanIbu.text.toString()
-        dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_PRIBADI)!!
+        val dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_PRIBADI)!!
+        Log.e(DATA_PRIBADI, dataPribadi.toString())
     }
 
     private fun intentToSchool() {
-        getDataParent()
-
         val dataParent = ParentParcelize(
-            namaAyah,
-            nikAyah,
-            namaIbu,
-            nikIbu,
-            tanggalLahirAyah,
-            tanggalLahirIbu,
-            alamatParent,
-            phoneOrtu,
-            pendidikanAyah,
-            pendidikanIbu,
-            pekerjaanAyah,
-            pekerjaanIbu,
-            dataPribadi
+            namaAyah = editTextNamaAyah.text.toString(),
+            nikAyah = editTextNikAyah.text.toString(),
+            namaIbu = editTextNamaIbu.text.toString(),
+            nikIbu = editTextNikIbu.text.toString(),
+            tanggalLahirAyah = editTextLahirAyah.text.toString(),
+            tanggalLahirIbu = editTextLahirIbu.text.toString(),
+            alamatParent = editTextAlamat.text.toString(),
+            phoneOrtu = editTextPhone.text.toString(),
+            pendidikanAyah = editTextPendidikanAyah.text.toString(),
+            pendidikanIbu = editTextPendidikanIbu.text.toString(),
+            pekerjaanAyah = editTextPekerjaanAyah.text.toString(),
+            pekerjaanIbu = editTextPekerjaanIbu.text.toString(),
+            dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_PRIBADI)!!
         )
 
         val resultIntent = Intent(this, SchoolFormActivity::class.java)
