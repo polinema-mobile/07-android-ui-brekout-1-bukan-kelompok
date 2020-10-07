@@ -13,9 +13,9 @@ data class ParentParcelize(
     var tanggalLahirIbu: String,
     var alamatParent: String,
     var phoneOrtu: String,
+    var emailParent: String,
     var pendidikanAyah: String,
     var pendidikanIbu: String,
     var pekerjaanAyah: String,
-    var pekerjaanIbu: String,
-    var dataPribadi: PribadiParcelize
+    var pekerjaanIbu: String
 ) : Parcelable
