@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.natlus.formui07.DataParcelize.ParentParcelize
+import com.natlus.formui07.DataParcelize.PribadiParcelize
 import com.natlus.formui07.DataParcelize.SchoolParcelize
 
 class ResultFormActivity : AppCompatActivity() {
+    private val DATA_PRIBADI = "DATA_PRIBADI"
+    private val DATA_PARENT = "DATA_PARENT"
     private val DATA_SCHOOL = "DATA_SCHOOL"
 
     private lateinit var textNama: TextView
@@ -72,15 +76,13 @@ class ResultFormActivity : AppCompatActivity() {
     }
 
     private fun setUp() {
-        textNama = findViewById(R.id.namaValue)
-        textNim = findViewById(R.id.nimValue)
-        textDob = findViewById(R.id.tglValue)
+
     }
 
     private fun getData() {
         val dataSchool = intent.getParcelableExtra<SchoolParcelize>(DATA_SCHOOL)!!
-        val dataParent = dataSchool.dataParent
-        val dataPribadi = dataSchool.dataParent.dataPribadi
+        val dataParent = intent.getParcelableExtra<ParentParcelize>(DATA_PARENT)!!
+        val dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_PRIBADI)!!
 
         schoolNamaUnivAsal = dataSchool.namaUnivAsal
         schoolNamaFakultasAsal = dataSchool.namaFakultasAsal
@@ -127,8 +129,8 @@ class ResultFormActivity : AppCompatActivity() {
         pribadiEmail = dataPribadi.Email
 
         Log.e(DATA_SCHOOL, dataSchool.toString())
-        Log.e(DATA_SCHOOL, dataSchool.dataParent.toString())
-        Log.e(DATA_SCHOOL, dataSchool.dataParent.dataPribadi.toString())
+        Log.e(DATA_SCHOOL, dataParent.toString())
+        Log.e(DATA_SCHOOL, dataPribadi.toString())
     }
 
     private fun setTextView() {

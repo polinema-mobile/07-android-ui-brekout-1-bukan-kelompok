@@ -12,6 +12,7 @@ import com.natlus.formui07.DataParcelize.PribadiParcelize
 import com.natlus.formui07.DataParcelize.SchoolParcelize
 
 class SchoolFormActivity : AppCompatActivity() {
+    private val DATA_PRIBADI = "DATA_PRIBADI"
     private val DATA_PARENT = "DATA_PARENT"
     private val DATA_SCHOOL = "DATA_SCHOOL"
 
@@ -79,11 +80,14 @@ class SchoolFormActivity : AppCompatActivity() {
             kodePosUnivAsal = editTextKodePos.text.toString(),
             akreditasiUnivAsal = editTextAkreditasiUnivAsal.text.toString(),
             nilaiIPK = editTextNilaiIPK.text.toString(),
-            dataParent = intent.getParcelableExtra<ParentParcelize>(DATA_PARENT)!!
         )
 
+        val dataParent = intent.getParcelableExtra<ParentParcelize>(DATA_PARENT)!!
+        val dataPribadi = intent.getParcelableExtra<PribadiParcelize>(DATA_PRIBADI)!!
         val resultIntent = Intent(this, ResultFormActivity::class.java)
         resultIntent.putExtra(DATA_SCHOOL, dataSchool)
+        resultIntent.putExtra(DATA_PARENT, dataParent)
+        resultIntent.putExtra(DATA_PRIBADI, dataPribadi)
         startActivity(resultIntent)
     }
 }
